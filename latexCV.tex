@@ -1,0 +1,148 @@
+% LaTeX Curriculum Vitae Template
+%
+% Copyright (C) 2004-2009 Jason Blevins <jrblevin@sdf.lonestar.org>
+% http://jblevins.org/projects/cv-template/
+%
+% Copyright (C) 2020 Junbin Huang
+% https://github.com/junbinhuang/latexCV
+%
+% You may use this document as a template to create your own CV
+% and you may redistribute the source code freely. No attribution is
+% required in any resulting documents. I do ask that you please leave
+% this notice and the above URLs in the source code if you choose to
+% redistribute this file.
+
+\documentclass[letterpaper]{article}
+
+\usepackage{marginnote}
+\newcommand{\years}[1]{\marginnote{\scriptsize #1}}
+\renewcommand*{\raggedleftmarginnote}{}
+\setlength{\marginparsep}{-5pt}
+\reversemarginpar
+
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage[T1]{fontenc}
+\usepackage[sc,osf]{mathpazo} % Refer to Jason's original file if you want to change fonts.
+
+\def\name{Your Name}
+\def\homepage{www.junbinh.com}
+
+\hypersetup{
+  colorlinks = true,
+  urlcolor = black,
+  pdfauthor = {\name},
+  pdfkeywords = {Keywords you like},
+  pdftitle = {\name: Curriculum Vitae},
+  pdfsubject = {Curriculum Vitae},
+  pdfpagemode = UseNone
+}
+
+\geometry{
+  body={6in, 8.5in},
+  left=1.25in,
+  top=1.25in
+}
+
+% Customize page headers
+\pagestyle{myheadings}
+\markright{\name}
+\thispagestyle{empty}
+
+% Custom section fonts
+\usepackage{sectsty}
+\sectionfont{\rmfamily\bfseries\Large}
+\subsectionfont{\rmfamily\mdseries\itshape\large}
+
+\setlength\parindent{0em}
+
+% Make lists without bullets and indentations
+\renewenvironment{itemize}{
+  \begin{list}{}{
+    \setlength{\leftmargin}{0em}
+  }
+}{
+  \end{list}
+}
+
+\begin{document}
+\noindent{\huge \bf\name}
+
+\vspace{0.25in}
+
+\begin{minipage}{0.48\linewidth}
+  Email: \href{mailto:your email}{Your email}\\
+  \href{http://www.mit.edu}{MIT} \\
+  Cambridge, MA 02139
+\end{minipage}\hfill
+\begin{minipage}{0.4\linewidth}
+  \begin{tabular}{ll}
+    Phone: &Your phone\\
+    Homepage: &\href{https://\homepage}{\homepage}\\
+    % Add some links here.
+    GitHub: &\href{https://github.com/junbinhuang}{github.com/junbinhuang}\\
+  \end{tabular}
+\end{minipage}
+
+
+\section*{Personal}
+
+Your personal information here.
+
+\section*{Research Interests}
+
+\begin{itemize}
+\item \textbf{Quantum Mechanics}
+\item \textbf{Relativity}
+\item \textbf{...}
+\end{itemize}
+
+\section*{Appointments}
+
+\begin{itemize}
+\item \years{2016--\\Present} \textbf{Professor} at XX University.
+\item \years{2010--\\2016} ...
+\end{itemize}
+
+\section*{Education}
+
+\begin{itemize}
+\item \years{2010} \textbf{Ph.D.} in Your Major, XX University
+\item \years{2006} \textbf{M.Sc.} ...
+\end{itemize}
+
+
+\section*{Service}
+...
+
+
+\section*{Publications}
+\subsection*{\textbf{Books}}
+\begin{enumerate}[leftmargin=*]
+\item \years{2020} Book 1
+\item \years{2019} Book 2
+\end{enumerate}
+\subsection*{\textbf{Journal Articles}}
+\begin{enumerate}[leftmargin=*]
+\item \years{2020} Paper 1
+\item \years{2019} Paper 2
+\end{enumerate}
+\subsection*{\textbf{Preprints}}
+\begin{enumerate}[leftmargin=*]
+\item \years{2020} arXiv 1
+\item \years{2019} arXiv 2
+\end{enumerate}
+
+\vfill{}
+
+% Footer
+\begin{center}
+  \begin{footnotesize}
+    Last updated: \today\\
+    %\href{\footerlink}{\texttt{\footerlink}}
+  \end{footnotesize}
+\end{center}
+
+\clearpage
+\end{document}
